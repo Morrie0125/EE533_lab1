@@ -2,7 +2,7 @@
 #include <sys/types.h>   // 基本型態定義 (如 pid_t, size_t)
 #include <sys/socket.h>  // socket, bind, listen, accept
 #include <netinet/in.h>  // struct sockaddr_in, htons, etc.
-
+#include <unistd.h>      // read, write, close
 
 #include <strings.h>   // bzero()
 #include <stdlib.h>    // atoi(), exit()
