@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-
+#include <signal.h> 
 void error(const char *msg)
 {
     perror(msg);
@@ -40,6 +40,8 @@ int main(int argc, char *argv[])
         fprintf(stderr,"ERROR, no port provided\n");
         exit(1);
     }
+
+    signal(SIGCHLD, SIG_IGN);
 
     // 1) 建立 socket
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
