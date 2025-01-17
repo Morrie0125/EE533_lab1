@@ -3,7 +3,9 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h> 
-
+#include <stdlib.h>     // exit, atoi
+#include <string.h>     // bzero, strlen
+#include <unistd.h>     // read, write, close
 void error(char *msg)
 {
     perror(msg);
